@@ -1,23 +1,19 @@
-package com.example.easychat.adapter;
+package com.example.chatfinalle.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.easychat.ChatActivity;
-import com.example.easychat.R;
-import com.example.easychat.model.ChatMessageModel;
-import com.example.easychat.utils.AndroidUtil;
-import com.example.easychat.utils.FirebaseUtil;
+import com.example.chatfinalle.R;
+import com.example.chatfinalle.model.ChatMessageModel;
+import com.example.chatfinalle.utils.FirebaseUtil;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 

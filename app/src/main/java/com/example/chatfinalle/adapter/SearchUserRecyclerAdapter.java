@@ -1,4 +1,4 @@
-package com.example.easychat.adapter;
+package com.example.chatfinalle.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,11 +12,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.easychat.ChatActivity;
-import com.example.easychat.R;
-import com.example.easychat.model.UserModel;
-import com.example.easychat.utils.AndroidUtil;
-import com.example.easychat.utils.FirebaseUtil;
+import com.example.chatfinalle.ChatActivity;
+import com.example.chatfinalle.R;
+import com.example.chatfinalle.model.UserModel;
+import com.example.chatfinalle.utils.AndroidUtil;
+import com.example.chatfinalle.utils.FirebaseUtil;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 

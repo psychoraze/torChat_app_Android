@@ -16,7 +16,7 @@
         <ImageView
             android:layout_width="160dp"
             android:layout_height="160dp"
-            android:src="@drawable/chat_icon"
+            android:src="@drawable/logo"
             app:tint="@color/my_secondary"/>
         <TextView
             android:layout_width="wrap_content"
@@ -28,21 +28,21 @@
             android:fontFamily="monospace"
             android:layout_marginTop="20dp"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="welcome, hacker"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:layout_marginTop="20dp"/>
+
         <ProgressBar
             android:layout_width="32dp"
             android:layout_height="wrap_content"/>
 
-
     </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Developed by easy tuto"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:layout_marginBottom="20dp"
-        android:textColor="@color/off_white"/>
 
 
 </RelativeLayout>

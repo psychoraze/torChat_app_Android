@@ -11,17 +11,25 @@
         android:layout_height="wrap_content"
         android:background="@color/my_primary"
         android:padding="10dp"
+        android:gravity="center"
         android:id="@+id/main_toolbar">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:layout_marginStart="10dp"
-            android:layout_centerVertical="true"/>
+        <ImageButton
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/exit_icon"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/exit_btn"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/logo"
+            android:layout_marginLeft="175dp"
+            app:tint="@color/my_secondary"/>
 
         <ImageButton
             android:layout_width="32dp"

@@ -1,15 +1,15 @@
-package com.example.easychat;
+package com.example.chatfinalle;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
-import com.example.easychat.utils.FirebaseUtil;
+import com.example.chatfinalle.utils.FirebaseUtil;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
     ImageButton searchButton;
+    ImageButton logoutBtn;
 
     ChatFragment chatFragment;
     ProfileFragment profileFragment;
@@ -34,9 +35,24 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         searchButton = findViewById(R.id.main_search_btn);
+        logoutBtn = findViewById(R.id.exit_btn);
 
         searchButton.setOnClickListener((v)->{
             startActivity(new Intent(MainActivity.this,SearchUserActivity.class));
+        });
+
+        logoutBtn.setOnClickListener((v)->{
+            FirebaseMessaging.getInstance().deleteToken().addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if(task.isSuccessful()){
+                        FirebaseUtil.logout();
+                        Intent intent = new Intent(MainActivity.this,SplashActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(intent);
+                    }
+                }
+            });
         });
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {

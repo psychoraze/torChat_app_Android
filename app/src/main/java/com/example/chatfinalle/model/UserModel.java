@@ -1,4 +1,4 @@
-package com.example.easychat.model;
+package com.example.chatfinalle.model;
 
 import com.google.firebase.Timestamp;
 

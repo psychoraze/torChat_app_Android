@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.easychat'
+    namespace 'com.example.chatfinalle'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.easychat"
+        applicationId "com.example.chatfinalle"
         minSdk 26
         targetSdk 33
         versionCode 1
